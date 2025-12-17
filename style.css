@@ -132,3 +132,28 @@ body { background-color: var(--bg-deep); color: var(--text-main); font-family: -
 }
 .val-target { color: #fff; font-weight: bold; }
 .val-actual { color: var(--gold); font-weight: bold; }
+
+/* --- ANIMASI VIP BARU --- */
+@keyframes blink-red {
+    0% { border-color: #ff4444; box-shadow: 0 0 5px #ff4444; }
+    50% { border-color: transparent; box-shadow: none; }
+    100% { border-color: #ff4444; box-shadow: 0 0 5px #ff4444; }
+}
+
+@keyframes blink-gold-text {
+    0% { background: rgba(212, 175, 55, 0.3); }
+    50% { background: transparent; }
+    100% { background: rgba(212, 175, 55, 0.3); }
+}
+
+/* Kotak di Dashboard */
+.vip-item.new-achiever {
+    animation: blink-red 1s infinite;
+    border-width: 2px !important;
+}
+
+/* Baris Nama di Modal */
+.v-item.new-name-blink {
+    animation: blink-gold-text 1s infinite;
+    border-left: 3px solid var(--gold);
+}
